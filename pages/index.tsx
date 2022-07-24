@@ -23,7 +23,7 @@ export default function Home() {
         </h1>
 
         <p className="my-16 leading-normal text-2xl text-center">
-          The best space jellyfish swag on the web!
+          The best space jellyfish swag in the universe!
         </p>
 
         <ul className="flex flex-wrap items-stretch justify-centers max-w-[316px] md:max-w-2xl xl:max-w-6xl">
