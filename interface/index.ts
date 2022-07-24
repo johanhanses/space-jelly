@@ -5,3 +5,7 @@ export interface IProduct {
   image: string
   price: number
 }
+
+export interface IProducts {
+  products: IProduct[]
+}

@@ -2,13 +2,12 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/future/image'
 import styles from '../styles/Home.module.css'
-// import tshirt from '../public/images/spacejelly-tshirt.jpeg'
-// import stickers from '../public/images/spacejelly-stickers.jpeg'
-// import combo from '../public/images/spacejelly-combo.jpeg'
-import products from '../data/products.json'
+import jsonProducts from '../data/products.json'
 import { IProduct } from '../interface'
+import { useState } from 'react'
 
 export default function Home() {
+  const [products, setProducts] = useState<IProduct[]>(jsonProducts)
   console.log(products)
   return (
     <div className="px-8">
@@ -28,7 +27,7 @@ export default function Home() {
         </p>
 
         <ul className="flex flex-wrap items-stretch justify-centers max-w-[316px] md:max-w-2xl xl:max-w-6xl">
-          {products.map((product: IProduct) => {
+          {products.map((product) => {
             const { id, title, description, image, price } = product
 
             return (
